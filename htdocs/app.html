@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<style>
+*{
+  margin: 0 0 0;  
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.imgtest{
+    width: 10%;
+    height: 10%;
+}
+.custom{
+    text-align: left;
+    background-color: rgb(231, 255, 20);
+    color: blue; 
+}
+
+b{
+    color: blueviolet;
+}
+
+h1{
+    text-align: center;
+}   
+</style>
+   
+    
+
+</head>
+<body>
+    <h1 class="custom">pino</h1>
+    <h2>eu sou gei</h1>
+    <img class="imgtest" src="a.jpeg" alt="pinto">
+    <input type="number" id="entrada" placeholder="bote seu cartao otario">
+    <button onclick="enviar()">
+        enviar
+    </button>
+    <p id="painel">
+        
+        Pinto
+
+    </p>
+    <script>
+        
+        function enviar(){
+            texto_input=document.getElementById("entrada").value
+            console.log(texto_input)
+            fetch("https://lookup.binlist.net/"+texto_input,
+            {mode:"cors"}).then(status).then(response => {
+                return response.json() 
+            }).then(res =>{
+                console.log(res)
+                //mostrar na pagina o cartao
+                document.getElementById("painel").innerHTML=`<b style="color: blue">Bandeira</b> ${res.scheme} 
+                
+                <br> <b>Pais</b> ${res.country.name}`
+            }).catch(error => {
+                console.log("bin nao foi encontrado")
+            })
+        }
+        
+
+    </script>
+</body>
