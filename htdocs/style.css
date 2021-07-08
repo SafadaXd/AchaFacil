@@ -1,10 +1,12 @@
 * {
     margin: 0 0 0;
-
 }
 body{
-    height: 100%;
-    width: 100%;
+    
+    background-image: url('build.jpg');
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    margin: 0;
 }
 h1{
     color: white;
@@ -21,7 +23,7 @@ h1{
     margin-right: 30%;
     margin-bottom: 0%;
     border-radius: 10px;
-    
+    background-color: #4386A3;
 }
 .img_logo{
     height: 50%;
@@ -31,10 +33,21 @@ h1{
 .painel_login input{
     font-size: 30px;
     border-radius: 10px;
+    background-color: rgb(153, 217, 234);
 }
-.painel_login button{
+.button_login{
     font-size: 30px;
     background-color: #40618c;
     border-radius: 10px;
-    width: 13%;
+   
+}
+.forget_pass{
+    width: 150px;
+    background-color: #269e98;
+    border-radius: 10px;
+}
+.creat_login{
+    width: 230px;
+    background-color: #269e98;
+    border-radius: 10px;
 }

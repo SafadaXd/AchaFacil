@@ -1,0 +1,36 @@
+*{
+    margin: 0 0 0;
+}
+header{
+    text-align: center;
+    background-color: #40618c;
+}
+header h1{
+    color: white;
+    font-size: 50px;
+}
+nav ul{
+    list-style-type: none;
+    background-color: #4386A3;
+    overflow: hidden;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+}
+nav li{
+    float: left;
+}
+nav a:hover{
+    background-color: grey;
+}
+body{
+    font-family: 'Century Gothic';
+}
+
+#rodapeid{
+    background-color: aqua;
+    height: 100px;
+}
